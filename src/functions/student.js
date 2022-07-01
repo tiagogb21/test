@@ -13,6 +13,4 @@ const createStudent = (name) => {
   };
 };
 
-console.log(createStudent('Tiago'));
-
 module.exports = createStudent;
