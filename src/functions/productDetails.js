@@ -20,15 +20,19 @@
 ]
 */
 
-const productDetails = (products) => products.reduce((acc, curr) => {
-  const obj = {
-    name: curr,
-    details: {
-      productId: `${curr}123`,
-    },
-  };
-  acc.push(obj);
-  return acc;
-}, []);
+const productDetails = (products) => {
+  const noProducts = 'No product was passed!';
+  if (!products || products.length === 0) return noProducts;
+  return products.reduce((acc, curr) => {
+    const obj = {
+      name: curr,
+      details: {
+        productId: `${curr}123`,
+      },
+    };
+    acc.push(obj);
+    return acc;
+  }, []);
+};
 
 module.exports = productDetails;
