@@ -1,5 +1,5 @@
-// Função que recebe 2 parâmetros:
-//  o nome do usuário e a idade dele.
+// Função que recebe 3 parâmetros:
+// Um objeto que contém os usuários o nome do usuário e a idade dele.
 // Verifica se existe no objeto passado
 // Se for um usuário válido retorna a mensagem:
 // 'Oi, NOME! Sua idade é IDADE anos. Bem vindo!'
