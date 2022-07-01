@@ -1,3 +1,23 @@
-// Função que recebe 2 parâmetros o nome do usuário e a idade dele.
+// Função que recebe 2 parâmetros:
+//  o nome do usuário e a idade dele.
+// Verifica se existe no objeto passado
+// Se for um usuário válido retorna a mensagem:
+// 'Oi, NOME! Sua idade é IDADE anos. Bem vindo!'
+// Caso contrário:
+// 'Usuário inválido!'
 
-// ex.: Oi, meu nome é Tunico! Tenho 30 anos
+const verifyingUsers = (users, name) => Object.entries(users).some((user) => user[1] === name);
+
+const isAValidUser = (users, name, age) => {
+  const invalidUser = 'Usuário inválido!';
+  if (!users || !name || !age) return invalidUser;
+  if (
+    typeof users !== 'object'
+    || typeof name !== 'string'
+    || typeof age !== 'number'
+  ) return invalidUser;
+  if (!verifyingUsers(users, name)) return invalidUser;
+  return `Oi, ${name}! Sua idade é ${age} anos. Bem vindo!`;
+};
+
+module.exports = isAValidUser;
